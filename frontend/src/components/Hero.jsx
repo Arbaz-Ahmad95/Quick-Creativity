@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../public/images/logo.png";
-import star from "../../public/images/star.svg";
-import bolt from "../../public/images/bolt.svg";
+import logo from "../assets/images/logo.png";
+import star from "../assets/images/star.svg";
+import bolt from "../assets/images/bolt.svg";
 const Hero = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
