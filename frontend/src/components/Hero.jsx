@@ -9,11 +9,11 @@ const Hero = () => {
       <div className="grid lg:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-6xl md:text-6xl font-bold leading-tight">
             UNLEASH YOUR <br /> CREATIVE IDEA.
           </h1>
 
-          <p className="mt-4 text-gray-600 text-lg">
+          <p className="mt-4 text-gray-600 font-medium text-2xl">
             Fast, High Quality Design & <br /> Development
           </p>
 

@@ -10,7 +10,7 @@ export default function Navbar() {
         <img
           src={FinalLogo}
           alt="Quick Creatives"
-          className="w-50 h-auto object-fill"
+          className="w-38.5 h-auto object-fit ml-60"
         />
       </div>
 
@@ -19,15 +19,15 @@ export default function Navbar() {
         <div className="flex items-center justify-end h-20 gap-10">
           
           {/* LINKS */}
-          <div className="flex items-center gap-8 font-medium">
-            <a href="#" className="text-green-500">Home</a>
+          <div className="nav flex items-center gap-8 ml-9 font-medium">
+            <a href="#" className="text-green-500 ">Home</a>
             <a href="#" className="hover:text-green-500">Services</a>
             <a href="#" className="hover:text-green-500">About Us</a>
             <a href="#" className="hover:text-green-500">Contact</a>
           </div>
 
           {/* BUTTON */}
-          <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800">
+          <button className="leftBtn bg-black mt-9 h-11 text-white  px-8 py-2 ml-26 rounded-md hover:bg-gray-800">
             Let’s Discuss
           </button>
 
