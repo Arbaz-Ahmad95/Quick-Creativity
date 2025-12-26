@@ -1,16 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
-body{
-    font-family: "Poppins", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  width: 100%;
+  height: 100vh;
 }
-.nav{
+.nav {
   font-size: 1.225rem;
   margin-top: 2rem;
   margin-left: 9px;
 }
-.leftBtn{
-  font-size: 1.125rem
+.leftBtn {
+  font-size: 1.125rem;
+}
+.gradient-text {
+  font-size: 60px; /* adjust as needed */
+  font-weight: bold;
+  background: linear-gradient(120deg, #070000, #20b78c 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.head {
+  background: linear-gradient(180deg, #a2ef86 -77.7%, #000 145%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

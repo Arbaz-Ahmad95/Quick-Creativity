@@ -1,37 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import FinalLogo from "../assets/FinalLogo.png";
 
 export default function Navbar() {
-  return (
-    <nav className="w-full bg-white  relative ">
-      
-      {/* LOGO WITH EXACT SIZE & POSITION */}
-      <div className="absolute top-4.5 left-13 w-76 h-19.5 flex items-center justify-center ">
-        <img
-          src={FinalLogo}
-          alt="Quick Creatives"
-          className="w-38.5 h-auto object-fit ml-60"
-        />
-      </div>
+  const [open, setOpen] = useState(false);
 
-      {/* NAV CONTENT */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-end h-20 gap-10">
-          
-          {/* LINKS */}
-          <div className="nav flex items-center gap-8 ml-9 font-medium">
-            <a href="#" className="text-green-500 ">Home</a>
+  return (
+    <nav className="w-full bg-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4">
+
+        {/* Top Bar */}
+        <div className="flex items-center justify-between h-20">
+
+          {/* Logo */}
+          <img
+            src={FinalLogo}
+            alt="Quick Creatives"
+            className="mr-4 h-auto w-38"
+          />
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center gap-8 font-medium">
+            <a href="#" className="text-green-500 text-xs xl:text-sm underline decoration-2">Home</a>
             <a href="#" className="hover:text-green-500">Services</a>
             <a href="#" className="hover:text-green-500">About Us</a>
             <a href="#" className="hover:text-green-500">Contact</a>
+
+            <button className="bg-black text-white px-6 py-2 rounded-md hover:bg-white hover:text-black hover:border transition">
+              Let’s Discuss
+            </button>
           </div>
 
-          {/* BUTTON */}
-          <button className="leftBtn bg-black mt-9 h-11 text-white  px-8 py-2 ml-26 rounded-md hover:bg-gray-800">
-            Let’s Discuss
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="lg:hidden  text-2xl"
+          >
+            ☰
           </button>
-
         </div>
+
+        {/* Mobile Menu */}
+        {open && (
+          <div className="lg:hidden flex flex-col gap-4 pb-6 font-medium">
+            <a href="#" className="text-green-500 text-xs">Home</a>
+            <a href="#" className="hover:text-green-500 text-xs">Services</a>
+            <a href="#" className="hover:text-green-500 text-xs">About Us</a>
+            <a href="#" className="hover:text-green-500 text-xs">Contact</a>
+
+            <button className="bg-black text-white px-4 py-2  rounded-md hover:bg-gray-800 w-28 text-xs">
+              Let’s Discuss
+            </button>
+          </div>
+        )}
+
       </div>
     </nav>
   );
